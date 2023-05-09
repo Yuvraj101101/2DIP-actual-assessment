@@ -1,6 +1,6 @@
-#import time library
+
 #import random library
-import time
+
 import random
 
 #make question variables
