@@ -164,7 +164,7 @@ def q5():
     #create the question options
     opt_17 = Radiobutton(root, text = 'Pablo Picasso', value = 17, font = ('Arial', 30))
     opt_18 = Radiobutton(root, text = 'Vincent Van Gogh', value = 18, font = ('Arial', 30))
-    opt_19 = Radiobutton(root, text = 'Leonardo davinci', value = 19, font = ('Arial', 30))
+    opt_19 = Radiobutton(root, text = 'Leonardo Davinci', value = 19, font = ('Arial', 30))
     opt_20 = Radiobutton(root, text = 'Michaelangelo', value = 20, font = ('Arial', 30))
 
     #format the question
@@ -263,7 +263,7 @@ def q8():
     next_7.pack_forget()
     
     #make all the variables global so they can be carried across functions
-    global question_8, opt_29, opt_30, opt_31, opt_32
+    global question_8, opt_29, opt_30, opt_31, opt_32, next_8
     
     #make the question label
     question_8 = Label(root, text = 'Which one of these animals lays eggs', font = ('Arial', 30))
