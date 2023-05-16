@@ -284,7 +284,7 @@ def q7():
     opt_28.pack(padx=10, pady=10)
 
     #check to see if the correct answer is selected
-    submit_7 = Button(root, text='Submit', command = lambda: call(correct.get(),2))
+    submit_7 = Button(root, text='Submit', command = lambda: call(correct.get(),26))
     submit_7.pack()
 
     #create button to move onto next question
