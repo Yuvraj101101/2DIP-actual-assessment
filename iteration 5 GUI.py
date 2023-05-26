@@ -1,20 +1,24 @@
 from tkinter import*
 
+#configure the gui frame base
 root = Tk()
 root.geometry('800x400') 
 root.title("General knowledge quiz")
 root.config(bg= '#8fd2ff')
+
+#make the scores list to carry all the previous scores before the application is quit
 scores = []
 
+#define score variable
 global score
 score = 0
 
+#make reset score function for restart()
 def reset_score():
     global score
     score = 0
-
 def restart():
-    reset_score()
+    reset_score() 
     
 
 
@@ -34,6 +38,7 @@ def call(par,value):
     
 
 def q1():
+    #set score to 0 in the beginning
     restart()
     #make all the variables global so they can be carried across functions
     global correct,label
@@ -366,8 +371,12 @@ def q10():
 
 def results():
     global score
+    #format the items in the scores list
+    formatted_scores = ''.join(str(scores))
 
+    #make the final score variable
     final_score = score
+    
     #Make the finish label
     finish = Label(root,width=800,bg='#ff7f50', text = f'Your final score was: {score}', font= ('Arial',50, 'bold','underline'))
     finish.pack()
@@ -381,14 +390,9 @@ def results():
     view_score.pack(pady=20)
 
     #make a view score label
-    previous_scores = Label(root, text = scores, font=('Arial',30,'italic','bold'),bg='#8fd2ff')
-    
+    previous_scores = Label(root, text = formatted_scores, font=('Arial',30,'italic','bold'),bg='#8fd2ff')
 
-    #score = 0
-    
-    
-    
-    
+      
 #run the main code
 q1()
 
