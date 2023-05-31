@@ -10,12 +10,12 @@ def call(par,value):
     if par == value:
         global score, label
         label = Label(root, text = 'CORRECT!!!')
-        label.pack()
+        label.pack(padx=10, pady=10)
         score +=1
     else:
         label = Label(root, text = "INCORRECT!!!")
         score += 0
-        label.pack()
+        label.pack(padx=10, pady=10)
     
 
 def q1():
@@ -81,7 +81,7 @@ def q2():
     opt_8.pack(padx=10, pady=10)
 
     #check to see if the user selected the correct option   
-    submit_2 = Button(root, text='Submit', command = lambda: call(correct.get(),5))
+    submit_2 = Button(root, text='Submit', command = lambda: [call(correct.get(),5)])
     submit_2.pack()
 
 

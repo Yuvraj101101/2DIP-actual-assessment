@@ -97,7 +97,7 @@ print("This is a multiple choice quiz, answer with either a, b, c, or d")
 #make the score variable and set to 0
 score = 0
 
-attempted = 10
+
 #valid answers list
 valid_answers = ["a","b", "c","d"]
 
@@ -116,7 +116,7 @@ while play_again == True:
         print(question)
         
         
-        
+        #create skip question feature
         skip_question = input("type 'yes' to skip and any other key to continue: ").lower()
         
         if skip_question=="yes":
@@ -130,7 +130,7 @@ while play_again == True:
         while answer not in valid_answers:
             print("INVALID!!!!!!!")
             print("please answer with a,b,c,d ")
-            answer = input("Answer: ").lower()
+            answer = input("ANSWER: ").lower()
         #check valid answer       
         if answer in valid_answers:
             correct_answers.append(shuffled_questions[question]) #puts the actual answer into the correct_answers list
@@ -163,7 +163,7 @@ while play_again == True:
              elif retry == 2:
                  print("thank you for playing!")
                  play_again = False #ends the whole while loop
-                 try_again += 1 # breaks the error catching while loop
+                 try_again += 1 # breaks the try and except while loop
                  
              else:
                 print("the only valid inputs are 1 or 2")

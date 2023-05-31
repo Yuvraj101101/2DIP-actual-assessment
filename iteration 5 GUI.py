@@ -17,6 +17,8 @@ score = 0
 def reset_score():
     global score
     score = 0
+
+#make the restart function to reset the score
 def restart():
     reset_score() 
     
@@ -27,7 +29,7 @@ def restart():
 def call(par,value):
     if par == value:
         global score, label
-        label = Label(root, text = 'CORRECT!!!', bg = '#8fd2ff',fg = '#05fc21', font=('Arial',24,'bold'))
+        label = Label(root, text = 'CORRECT!!!', bg = '#8fd2ff',fg = '#47ff47', font=('Arial',24,'bold'))
         label.pack(padx = 10, pady = 10)
         score +=1
     else:
@@ -40,6 +42,7 @@ def call(par,value):
 def q1():
     #set score to 0 in the beginning
     restart()
+    
     #make all the variables global so they can be carried across functions
     global correct,label
 
@@ -115,8 +118,6 @@ def q2():
     
 def q3():
 
-    #make all variables global so they can be reached in other functions
-    global question_3,opt_9, opt_10, opt_11, opt_12, next_3, score, submit_3
 
     #make the question label
     question_3 = Label(root, text = 'What is the smallest country in the world by land area?',width = 800, font = ('Arial', 30,'italic','underline','bold'), bg='#f5c43d')
@@ -148,9 +149,6 @@ def q3():
     
     
 def q4():
-
-    #make variables global so they can be reached across functions
-    global question_4, opt_13, opt_14, opt_15, opt_16, next_4, score, submit_4
     
     #make the question label
     question_4 = Label(root, text = 'Who discovered Penicillin?', width = 800, font = ('Arial', 50,'italic','underline','bold'),bg='#f5c43d')
@@ -183,8 +181,6 @@ def q4():
         
 def q5():
 
-    #make all the variables global so they can be carried across functions
-    global question_5, opt_17, opt_18, opt_19, opt_20, next_5, score, submit_5
 
     #create the question label
     question_5 = Label(root, text = 'Who painted the Mona Lisa?',width = 800, font = ('Arial', 50,'italic','underline','bold'),bg='#f5c43d')
